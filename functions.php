@@ -461,6 +461,15 @@ function add_silde()
         $uploadOk = 0;
     }
 
+    if (file_exists("../../files") == false) {
+        mkdir("../../files");
+        $uploadOk == 0;
+    }
+    if (file_exists("../../files/slideimg") == false) {
+        mkdir("../../files/slideimg");
+        $uploadOk == 0;
+    }
+
     // Check if $uploadOk is set to 0 by an error
     if ($uploadOk == 0) {
         $_SESSION["failmsg"] = 'Sorry, your file was not uploaded.';
@@ -582,6 +591,16 @@ function add_product()
             $uploadOk_main = 0;
             // $uploadOk_thumbnail = 0;
         }
+
+        //checks if dir exist
+        if (file_exists("../../files") == false) {
+            mkdir("../../files");
+            $uploadOk_main == 0;
+        }
+        if (file_exists("../../files/product_img") == false) {
+            mkdir("../../files/product_img");
+            $uploadOk_main == 0;
+        }
         // Check if $uploadOk is set to 0 by an error
         //elseif ($uploadOk_thumbnail == 0) {
         //  $_SESSION["warn"] = 'Sorry, your Thumbnail was not uploaded.';
@@ -589,6 +608,7 @@ function add_product()
         if ($uploadOk_main == 0) {
             $_SESSION["warn"] = 'Sorry, your Main Image was not uploaded.';
         } else {
+
 
 
             $name         = $_POST['product_title'];
