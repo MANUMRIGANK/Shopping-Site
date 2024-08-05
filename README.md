@@ -20,5 +20,7 @@ This is just a project I created on my own and refering papers because I took a 
 I could have also added many things like pagination, checking out, and so on, but I thought this much was enough for a practice and I wanted to learn the mern stack, so I did this much and left it. I know it's bad to leave projects, but I wanted to do other things. This was just a confidence building or revising, maybe.
 
 
+#Stack used : i worked only with php, html, css and js the frontend is not mine its bootstrap template
+
 
 
